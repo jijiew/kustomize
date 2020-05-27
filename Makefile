@@ -44,7 +44,7 @@ $(MYGOBIN)/golangci-lint-kustomize:
 	( \
 		set -e; \
 		cd hack; \
-		GO111MODULE=on go build -tags=tools -o $(MYGOBIN)/golangci-lint-kustomize github.com/golangci/golangci-lint/cmd/golangci-lint; \
+		GO111MODULE=on go build --mod=vendor -tags=tools -o $(MYGOBIN)/golangci-lint-kustomize github.com/golangci/golangci-lint/cmd/golangci-lint; \
 	)
 
 # Version pinned by api/go.mod
