@@ -38,9 +38,19 @@ func TestFmtCommand_files(t *testing.T) {
 		return
 	}
 
+	f3, err := ioutil.TempFile("", "cmdfmt*.yaml")
+	if !assert.NoError(t, err) {
+		return
+	}
+	defer os.RemoveAll(f3.Name())
+	err = ioutil.WriteFile(f3.Name(), testyaml.UnformattedYaml3, 0600)
+	if !assert.NoError(t, err) {
+		return
+	}
+
 	// fmt the files
 	r := commands.GetFmtRunner("")
-	r.Command.SetArgs([]string{f1.Name(), f2.Name()})
+	r.Command.SetArgs([]string{f1.Name(), f2.Name(), f3.Name()})
 	err = r.Command.Execute()
 	if !assert.NoError(t, err) {
 		return
@@ -60,6 +70,14 @@ func TestFmtCommand_files(t *testing.T) {
 		return
 	}
 	if !assert.Equal(t, string(testyaml.FormattedYaml2), string(b)) {
+		return
+	}
+
+	b, err = ioutil.ReadFile(f3.Name())
+	if !assert.NoError(t, err) {
+		return
+	}
+	if !assert.Equal(t, string(testyaml.FormattedYaml3), string(b)) {
 		return
 	}
 }
