@@ -64,7 +64,9 @@ items:
     annotations:
       gke.io/cluster: gke://cpa-kit-dev/us-central1/cpa-kit-dev-us-central1
       kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{"gke.io/cluster":"gke://cpa-kit-dev/us-central1/cpa-kit-dev-us-central1"},"name":"kit-server-dev"}}
+        {"apiVersion":"v1","kind":"Namespace",
+         "metadata":{"annotations":{"gke.io/cluster":"gke://cpa-kit-dev/us-central1/cpa-kit-dev-us-central1"},
+         "name":"kit-server-dev"}}
     creationTimestamp: "2020-06-04T07:17:23Z"
     name: kit-server-dev
     resourceVersion: "7881"
@@ -194,7 +196,9 @@ items:
     annotations:
       gke.io/cluster: gke://cpa-kit-dev/us-central1/cpa-kit-dev-us-central1
       kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{"gke.io/cluster":"gke://cpa-kit-dev/us-central1/cpa-kit-dev-us-central1"},"name":"kit-server-dev"}}
+        {"apiVersion":"v1","kind":"Namespace",
+         "metadata":{"annotations":{"gke.io/cluster":"gke://cpa-kit-dev/us-central1/cpa-kit-dev-us-central1"},
+         "name":"kit-server-dev"}}
     creationTimestamp: "2020-06-04T07:17:23Z"
     resourceVersion: "7881"
     selfLink: /api/v1/namespaces/kit-server-dev
