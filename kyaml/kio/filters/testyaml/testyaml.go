@@ -33,40 +33,6 @@ items:
 - apiVersion: v1
   kind: Namespace
   metadata:
-    creationTimestamp: "2020-06-04T06:50:09Z"
-    name: default
-    resourceVersion: "157"
-    selfLink: /api/v1/namespaces/default
-    uid: a1e97d69-a62f-11ea-b632-42010a8000a7
-  spec:
-    finalizers:
-    - kubernetes
-  status:
-    phase: Active
-- apiVersion: v1
-  kind: Namespace
-  metadata:
-    creationTimestamp: "2020-06-04T06:53:26Z"
-    labels:
-      name: kit
-    name: kit
-    resourceVersion: "1702"
-    selfLink: /api/v1/namespaces/kit
-    uid: 17235129-a630-11ea-b632-42010a8000a7
-  spec:
-    finalizers:
-    - kubernetes
-  status:
-    phase: Active
-- apiVersion: v1
-  kind: Namespace
-  metadata:
-    annotations:
-      gke.io/cluster: gke://cpa-kit-dev/us-central1/cpa-kit-dev-us-central1
-      kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"v1","kind":"Namespace",
-         "metadata":{"annotations":{"gke.io/cluster":"gke://cpa-kit-dev/us-central1/cpa-kit-dev-us-central1"},
-         "name":"kit-server-dev"}}
     creationTimestamp: "2020-06-04T07:17:23Z"
     name: kit-server-dev
     resourceVersion: "7881"
@@ -106,9 +72,6 @@ items:
 - apiVersion: v1
   kind: Namespace
   metadata:
-    annotations:
-      kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"name":"kube-system"}}
     creationTimestamp: "2020-06-04T06:50:05Z"
     name: kube-system
     resourceVersion: "143"
@@ -164,41 +127,7 @@ items:
 - apiVersion: v1
   kind: Namespace
   metadata:
-    name: default
-    creationTimestamp: "2020-06-04T06:50:09Z"
-    resourceVersion: "157"
-    selfLink: /api/v1/namespaces/default
-    uid: a1e97d69-a62f-11ea-b632-42010a8000a7
-  spec:
-    finalizers:
-    - kubernetes
-  status:
-    phase: Active
-- apiVersion: v1
-  kind: Namespace
-  metadata:
-    name: kit
-    labels:
-      name: kit
-    creationTimestamp: "2020-06-04T06:53:26Z"
-    resourceVersion: "1702"
-    selfLink: /api/v1/namespaces/kit
-    uid: 17235129-a630-11ea-b632-42010a8000a7
-  spec:
-    finalizers:
-    - kubernetes
-  status:
-    phase: Active
-- apiVersion: v1
-  kind: Namespace
-  metadata:
     name: kit-server-dev
-    annotations:
-      gke.io/cluster: gke://cpa-kit-dev/us-central1/cpa-kit-dev-us-central1
-      kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"v1","kind":"Namespace",
-         "metadata":{"annotations":{"gke.io/cluster":"gke://cpa-kit-dev/us-central1/cpa-kit-dev-us-central1"},
-         "name":"kit-server-dev"}}
     creationTimestamp: "2020-06-04T07:17:23Z"
     resourceVersion: "7881"
     selfLink: /api/v1/namespaces/kit-server-dev
@@ -238,9 +167,6 @@ items:
   kind: Namespace
   metadata:
     name: kube-system
-    annotations:
-      kubectl.kubernetes.io/last-applied-configuration: |
-        {"apiVersion":"v1","kind":"Namespace","metadata":{"annotations":{},"name":"kube-system"}}
     creationTimestamp: "2020-06-04T06:50:05Z"
     resourceVersion: "143"
     selfLink: /api/v1/namespaces/kube-system
